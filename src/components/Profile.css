@@ -1,0 +1,136 @@
+/* ========================
+User/Profile Page CSS
+======================== */
+
+.user_nav {
+position: relative;
+}
+
+.user_icon {
+cursor: pointer;
+font-size: 24px;
+color: #333;
+}
+
+.user_dropdown {
+position: absolute;
+top: 40px;
+right: 0;
+background: #332E34;
+border: 1px solid #ccc;
+border-radius: 8px;
+width: 150px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.user_dropdown ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.user_dropdown li {
+color: black;
+padding: 10px;
+}
+
+.user_dropdown li:hover {
+background-color: black;
+color: white;
+}
+
+.main_profile {
+margin-left: 20%;
+width: 60%;
+height: 90vh;
+padding: 1rem;
+}
+
+.main_profile input {
+margin-top: 3rem;
+padding-left: 1rem;
+border-radius: 0.5rem;
+margin-left: 4rem;
+border: none;
+height: 2rem;
+outline: none;
+width: 18rem;
+background-color: #F5F5F5;
+}
+
+.main_profile .pass {
+height: 3rem;
+width: 30rem;
+}
+
+.main_profile button {
+background-color: #DB4444;
+margin-left: 24rem;
+height: 2.5rem;
+margin-top: 2rem;
+width: 11rem;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+/* ========================
+Responsive Styles
+======================== */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+.main_profile {
+margin-left: 10%;
+width: 80%;
+}
+
+.main_profile input {
+margin-left: 2rem;
+width: 16rem;
+}
+
+.main_profile .pass {
+width: 25rem;
+}
+
+.main_profile button {
+margin-left: 15rem;
+width: 10rem;
+}
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+.main_profile {
+margin-left: auto;
+margin-right: auto;
+width: 95%;
+height: auto;
+}
+
+.main_profile input {
+margin-left: 0;
+width: 100%;
+}
+
+.main_profile .pass {
+width: 100%;
+}
+
+.main_profile button {
+margin-left: 0;
+width: 100%;
+}
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 576px) {
+.main_profile input,
+.main_profile .pass,
+.main_profile button {
+font-size: 14px;
+height: auto;
+padding: 0.5rem;
+}
+}

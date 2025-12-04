@@ -1,0 +1,90 @@
+/* ========================
+Footer CSS
+======================== */
+
+.main_footer {
+display: flex;
+justify-content: space-evenly;
+background-color: black;
+color: white;
+height: 20rem;
+flex-wrap: wrap; /* allows items to wrap on smaller screens */
+padding: 2rem 1rem;
+}
+
+.exclusive {
+margin-top: 5rem;
+}
+
+.exclusive p,
+.exclusive input {
+cursor: pointer;
+margin-top: 0.4rem;
+}
+
+.signup_main {
+margin-bottom: 9rem;
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+}
+
+/* ========================
+Responsive Styles
+======================== */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+.main_footer {
+justify-content: space-around;
+height: auto;
+padding: 2rem;
+}
+
+.exclusive {
+margin-top: 3rem;
+}
+
+.signup_main {
+flex-direction: column;
+align-items: center;
+margin-bottom: 5rem;
+}
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+.main_footer {
+flex-direction: column;
+align-items: center;
+text-align: center;
+height: auto;
+padding: 1.5rem;
+}
+
+.exclusive {
+margin-top: 2rem;
+}
+
+.signup_main {
+margin-bottom: 3rem;
+width: 90%;
+}
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 576px) {
+.main_footer {
+padding: 1rem;
+}
+
+.exclusive p,
+.exclusive input {
+font-size: 14px;
+}
+
+.signup_main {
+width: 100%;
+margin-bottom: 2rem;
+}
+}

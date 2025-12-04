@@ -1,0 +1,180 @@
+/* ========================
+Main Cart CSS
+======================== */
+
+/* Main cart container */
+.main_cart {
+width: 90%;
+max-width: 1200px;
+margin: 20px auto;
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 20px;
+background: #fff;
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Cart header row */
+.cart_header {
+display: grid;
+grid-template-columns: 3fr 1fr 1fr 1fr; /* Product, Price, Quantity, Subtotal */
+gap: 10px;
+font-weight: bold;
+padding-bottom: 10px;
+border-bottom: 1px solid #ccc;
+}
+
+/* Each cart item row */
+.cart_row {
+display: grid;
+grid-template-columns: 3fr 1fr 1fr 1fr;
+gap: 10px;
+align-items: center;
+padding: 15px 0;
+border-bottom: 1px solid #eee;
+}
+
+/* Product column: image + name */
+.cart_row .product {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.cart_row .product img {
+width: 80px;
+height: 80px;
+object-fit: contain;
+border: 1px solid #ddd;
+border-radius: 5px;
+padding: 5px;
+background: #f9f9f9;
+}
+
+/* Price, quantity, subtotal */
+.cart_row .price,
+.cart_row .quantity,
+.cart_row .subtotal {
+text-align: center;
+}
+
+/* Total price section */
+.cart_total {
+text-align: right;
+font-size: 20px;
+font-weight: bold;
+margin-top: 20px;
+}
+
+/* Quantity buttons */
+.quantity_btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 5px;
+}
+
+.quantity_btn button {
+padding: 5px 10px;
+border: 1px solid #ccc;
+background: #fff;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.quantity_btn button:hover {
+background: #f0f0f0;
+}
+
+/* Place order button */
+.place_order {
+background-color: #DB4444;
+border: none;
+margin-top: 2rem;
+height: 3rem;
+width: 13rem;
+color: white;
+border-radius: 0.6rem;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+.place_order:hover {
+transform: translateY(-3px);
+}
+
+/* ========================
+Responsive Styles
+======================== */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+.cart_header,
+.cart_row {
+grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.cart_row .product img {
+width: 60px;
+height: 60px;
+}
+
+.cart_total {
+font-size: 18px;
+}
+
+.place_order {
+width: 11rem;
+height: 2.8rem;
+}
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+.cart_header,
+.cart_row {
+grid-template-columns: 2fr 1fr; /* Only Product + Total for smaller screens */
+}
+
+.cart_row .quantity,
+.cart_row .subtotal {
+display: none; /* hide less important columns */
+}
+
+.cart_row .product {
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+}
+
+.cart_row .product img {
+width: 50px;
+height: 50px;
+}
+
+.cart_total {
+font-size: 16px;
+}
+
+.place_order {
+width: 100%;
+height: 2.5rem;
+margin-top: 1.5rem;
+}
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 576px) {
+.main_cart {
+padding: 15px;
+}
+
+.cart_row .product img {
+width: 45px;
+height: 45px;
+}
+
+.cart_total {
+font-size: 14px;
+}
+}

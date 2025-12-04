@@ -1,0 +1,109 @@
+/* ========================
+Signup Page CSS
+======================== */
+
+.signup_image {
+background-image: url('.//assets/Side Image.png');
+background-repeat: no-repeat;
+background-size: cover;
+width: 600px;
+height: 540px;
+}
+
+.signup_form {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-left: 15rem;
+}
+
+.signup_form input {
+margin-top: 2rem;
+border: none;
+border-bottom: 2px solid #ccc;
+outline: none;
+padding: 8px;
+background: transparent;
+}
+
+.signup_form button {
+border: none;
+color: white;
+border-radius: 0.1rem;
+margin-top: 2rem;
+background-color: #DB4444;
+width: 126px;
+height: 26px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.signup_form button:hover {
+background-color: #b73737;
+}
+
+p a {
+color: black;
+border-bottom: 1px solid black;
+}
+
+/* ========================
+Responsive Styles
+======================== */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+.signup_image {
+width: 450px;
+height: 400px;
+}
+
+.signup_form {
+margin-left: 8rem;
+}
+
+.signup_form button {
+width: 110px;
+height: 24px;
+}
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+.signup_image {
+width: 100%;
+height: 300px;
+}
+
+.signup_form {
+margin-left: 0;
+width: 90%;
+}
+
+.signup_form input {
+width: 100%;
+}
+
+.signup_form button {
+width: 100%;
+height: 30px;
+}
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 576px) {
+.signup_image {
+height: 250px;
+}
+
+.signup_form input {
+font-size: 14px;
+padding: 6px;
+}
+
+.signup_form button {
+font-size: 14px;
+padding: 6px;
+}
+}

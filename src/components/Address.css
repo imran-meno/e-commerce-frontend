@@ -1,0 +1,81 @@
+/* ========================
+Address Page CSS
+======================== */
+
+.address-container {
+max-width: 500px;
+margin: 50px auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: #f9f9f9;
+}
+
+.address-form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.address-form label {
+display: flex;
+flex-direction: column;
+font-weight: 500;
+}
+
+.address-form input {
+padding: 8px 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.submit-btn {
+padding: 10px;
+background-color: #DB4444;
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+background-color: #b73737;
+}
+
+/* ========================
+Responsive Styles
+======================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+.address-container {
+max-width: 400px;
+padding: 15px;
+margin: 40px auto;
+}
+
+.address-form input,
+.submit-btn {
+padding: 8px;
+}
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+.address-container {
+max-width: 90%;
+padding: 10px;
+margin: 30px auto;
+}
+
+.address-form input,
+.submit-btn {
+padding: 6px;
+}
+
+.submit-btn {
+font-size: 14px;
+}
+}

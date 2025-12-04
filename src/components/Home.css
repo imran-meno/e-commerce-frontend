@@ -1,0 +1,161 @@
+/* ========================
+Products/Items CSS
+======================== */
+
+/* Container for all items */
+.main_item_container {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+gap: 25px;
+padding: 20px;
+}
+
+/* Single product card */
+.item_main {
+background: #ffffff;
+border-radius: 10px;
+padding: 15px;
+box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+text-align: center;
+transition: transform 0.3s;
+}
+
+.item_main:hover {
+transform: translateY(-5px);
+}
+
+/* Image container */
+.image_background {
+width: 100%;
+height: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #f4f4f4;
+border-radius: 8px;
+overflow: hidden;
+}
+
+/* Product image */
+.product_img {
+width: 100%;
+max-width: 180px;
+height: 180px;
+object-fit: contain;
+}
+
+/* Product name */
+.product_name {
+font-size: 18px;
+font-weight: bold;
+margin-top: 10px;
+}
+
+/* Product price */
+.product_price {
+font-size: 16px;
+color: #d10000;
+font-weight: bold;
+margin-top: 5px;
+}
+
+/* Add to Cart button */
+.add_btn {
+background: #DB4444;
+color: white;
+width: 100%;
+padding: 10px;
+margin-top: 12px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.add_btn:hover {
+background: #444;
+}
+
+.logo_nav {
+cursor: pointer;
+}
+
+/* ========================
+Responsive Styles
+======================== */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+.main_item_container {
+grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+gap: 20px;
+padding: 15px;
+}
+
+.image_background {
+height: 180px;
+}
+
+.product_img {
+max-width: 150px;
+height: 150px;
+}
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+.main_item_container {
+grid-template-columns: 1fr; /* 1 item per row */
+gap: 15px;
+padding: 10px;
+}
+
+.image_background {
+height: 150px;
+}
+
+.product_img {
+max-width: 120px;
+height: 120px;
+}
+
+.product_name {
+font-size: 16px;
+}
+
+.product_price {
+font-size: 14px;
+}
+
+.add_btn {
+padding: 8px;
+}
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 576px) {
+.main_item_container {
+padding: 5px;
+gap: 10px;
+}
+
+.image_background {
+height: 120px;
+}
+
+.product_img {
+max-width: 100px;
+height: 100px;
+}
+
+.product_name {
+font-size: 14px;
+}
+
+.product_price {
+font-size: 13px;
+}
+
+.add_btn {
+padding: 6px;
+}
+}

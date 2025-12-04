@@ -1,0 +1,107 @@
+/* ========================
+Shop/Product Detail Page CSS
+======================== */
+
+.main_shop {
+display: flex;
+justify-content: center;
+align-items: start;
+gap: 40px;
+padding: 40px;
+flex-wrap: wrap;
+}
+
+.shop_image_back img {
+width: 350px;
+height: 350px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+.shop_detail {
+max-width: 450px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.shop_price {
+font-size: 22px;
+font-weight: bold;
+color: green;
+}
+
+.buy_btn {
+padding: 12px 22px;
+background-color: #DB4444;
+color: white;
+border: none;
+cursor: pointer;
+margin-top: 20px;
+font-size: 16px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.buy_btn:hover {
+background-color: #444;
+}
+
+/* ========================
+Responsive Styles
+======================== */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+.main_shop {
+gap: 30px;
+padding: 30px;
+}
+
+.shop_image_back img {
+width: 300px;
+height: 300px;
+}
+
+.shop_detail {
+max-width: 350px;
+}
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+.main_shop {
+flex-direction: column;
+align-items: center;
+gap: 20px;
+padding: 20px;
+}
+
+.shop_image_back img {
+width: 250px;
+height: 250px;
+}
+
+.shop_detail {
+max-width: 100%;
+text-align: center;
+}
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 576px) {
+.shop_image_back img {
+width: 200px;
+height: 200px;
+}
+
+.shop_price {
+font-size: 18px;
+}
+
+.buy_btn {
+width: 100%;
+padding: 10px;
+font-size: 14px;
+}
+}
