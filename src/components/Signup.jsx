@@ -12,10 +12,10 @@ function Signup(){
 
     const HandleSumbit=async(e)=>{
         e.preventDefault()
-        
+        const API_URL= "https://e-commerce-backend-ero2.onrender.com"
 
               const res = await axios
-              .post('http://localhost:3000/signup',{name,email,password})
+              .post(`${API_URL}/signup`,{name,email,password})
             .then((result)=>{console.log(result)})
             .catch((err)=>{console.log(err)})
         }
