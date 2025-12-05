@@ -53,5 +53,4 @@ src/admin.css
 # Assets
 
 
-config/cloudinary.js
 .env

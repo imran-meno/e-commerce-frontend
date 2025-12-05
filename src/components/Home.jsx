@@ -9,7 +9,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = "https://mern-ecommerce-oqzg.onrender.com"; // Your Render backend
+   const API_URL = "https://e-commerce-backend-ero2.onrender.com";
 
   useEffect(() => {
     const fetchProducts = async () => {
