@@ -6,8 +6,8 @@ function Admin() {
   const [pro_name, setProName] = useState("");
   const [pro_price, setProPrice] = useState("");
   const [pro_image, setProImage] = useState(null);
-  
-  // Use your Render backend URL here
+
+  // Render Backend URL
   const API_URL = "https://e-commerce-backend-ero2.onrender.com";
 
   const handleSubmit = async (e) => {
@@ -24,12 +24,11 @@ function Admin() {
     formData.append("pro_image", pro_image);
 
     try {
-      const res = await axios.post(`${API_URL}/admin`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
-      alert("Product added successfully!");
       
-      // Clear the form
+      const res = await axios.post(`${API_URL}/admin`, formData);
+
+      alert("Product added successfully!");
+
       setProName("");
       setProPrice("");
       setProImage(null);
@@ -53,6 +52,7 @@ function Admin() {
           placeholder="Product Name"
           required
         />
+
         <input
           type="number"
           value={pro_price}
@@ -60,12 +60,14 @@ function Admin() {
           placeholder="Product Price"
           required
         />
+
         <input
           type="file"
           accept="image/*"
           onChange={(e) => setProImage(e.target.files[0])}
           required
         />
+
         <button type="submit">Add Product</button>
       </form>
     </div>
