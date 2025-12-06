@@ -1,9 +1,11 @@
 import axios from 'axios';
 import './Cart.css';
 import { useEffect, useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function Cart() {
   const [CartItem, SetCartItem] = useState([]);
+  const navigate=useNavigate(navigator)
 const API_URL= "https://e-commerce-backend-ero2.onrender.com"
 
   const fetchCart = async () => {
@@ -34,6 +36,9 @@ const API_URL= "https://e-commerce-backend-ero2.onrender.com"
       )
     );
   };
+  const goToShop=()=>{
+    navigate('/address')
+  }
 
   return (
     <div className="main_cart">
@@ -77,7 +82,7 @@ const API_URL= "https://e-commerce-backend-ero2.onrender.com"
         ))
       )}
 
-        <div><button className='place_order'>Place Order</button></div>
+        <div><button className='place_order' onClick={goToShop}>Place Order</button></div>
     </div>
     
   );
