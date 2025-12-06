@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './Profile.css'
 
+ const API_URL= "https://e-commerce-backend-ero2.onrender.com"
+
 function Profile() {
 
   const [name, setName] = useState("");
@@ -19,7 +21,7 @@ function Profile() {
 
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/profile/${userEmail}`);
+        const res = await axios.get(`${API_URL}/profile/${userEmail}`);
         setName(res.data.name);
         setEmail(res.data.email);
         setAddress(res.data.address || "");
