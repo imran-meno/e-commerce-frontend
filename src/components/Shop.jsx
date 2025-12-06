@@ -34,7 +34,7 @@ const user=JSON.parse(localStorage.getItem('user'))
     navigate('/login')
     
   }
-  else{
+  else{ 
     navigate('/address')
   }
   }

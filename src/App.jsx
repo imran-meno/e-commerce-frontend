@@ -14,11 +14,16 @@ import Shop from './components/Shop';
 import Address from './components/Address';
 
 function App() {
+
+    useEffect(() => {
+    // Wake up backend when app opens
+    fetch("https://e-commerce-backend-ero2.onrender.com");
+  }, []);
   return (
    <BrowserRouter>
   <Routes>
     
-    <Route path="/admin" element={<Admin />} />
+    {/* <Route path="/admin" element={<Admin />} /> */}
 
    
     <Route
