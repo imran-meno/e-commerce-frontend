@@ -12,11 +12,12 @@ import Cart from './components/Cart'
 import Logout from './components/Logout';
 import Shop from './components/Shop';
 import Address from './components/Address';
+import { useEffect } from 'react';
 
 function App() {
 
     useEffect(() => {
-    // Wake up backend when app opens
+   
     fetch("https://e-commerce-backend-ero2.onrender.com");
   }, []);
   return (
