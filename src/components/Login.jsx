@@ -8,12 +8,16 @@ function Login() {
 
   const [email, Setemail] = useState("");
   const [password, Setpassword] = useState("");
+  const API_URL= "https://e-commerce-backend-ero2.onrender.com"
+
 
   const HandleSumbit = async (e) => {
     e.preventDefault();
 
+
+
     try {
-      const res = await axios.post("http://localhost:3000/login", {
+      const res = await axios.post(`${API_URL}/login`, {
         email,
         password,
       });

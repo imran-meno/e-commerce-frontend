@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react';
 
 function Cart() {
   const [CartItem, SetCartItem] = useState([]);
+const API_URL= "https://e-commerce-backend-ero2.onrender.com"
 
   const fetchCart = async () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'));
       if (!user) return;
 
-      const res = await axios.get('http://localhost:3000/viewcart', {
+      const res = await axios.get(`${API_URL}/viewcart`, {
         params: { userId: user._id }
       });
       SetCartItem(res.data);

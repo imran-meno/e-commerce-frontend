@@ -7,11 +7,12 @@ function Shop() {
   const { id } = useParams(); // Get /product/:id
   const [product, setProduct] = useState(null);
   const navigate = useNavigate(navigator)
+  const API_URL= "https://e-commerce-backend-ero2.onrender.com"
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:3000/products/${id}`);
+        const { data } = await axios.get(`${API_URL}/products/${id}`);
         setProduct(data);
       } catch (err) {
         console.error("Error fetching product details:", err);
