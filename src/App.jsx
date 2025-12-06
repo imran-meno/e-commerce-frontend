@@ -16,10 +16,7 @@ import { useEffect } from 'react';
 
 function App() {
 
-    useEffect(() => {
    
-    fetch("https://e-commerce-backend-ero2.onrender.com");
-  }, []);
   return (
    <BrowserRouter>
   <Routes>
