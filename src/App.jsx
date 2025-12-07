@@ -12,7 +12,7 @@ import Cart from './components/Cart'
 import Logout from './components/Logout';
 import Shop from './components/Shop';
 import Address from './components/Address';
-import { useEffect } from 'react';
+
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
    <BrowserRouter>
   <Routes>
     
-    <Route path="/admin" element={<Admin />} />
+    {/* <Route path="/admin" element={<Admin />} /> */}
 
    
     <Route

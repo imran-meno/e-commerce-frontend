@@ -47,7 +47,7 @@ dist-ssr/
 
 # Admin pages (JSX + CSS)
 
-src/admin/
+src/admin.JSX
 src/admin.css
 
 # Assets
