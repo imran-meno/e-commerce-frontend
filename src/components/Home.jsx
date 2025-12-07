@@ -62,7 +62,7 @@ function Home() {
     navigate(`/product/${id}`);
   };
 
-  if (loading) return <p>Loading products...</p>;
+  if (loading) return <p>Loading products... This may take some time please wait...</p>;
   if (error) return <p>{error}</p>;
   if (products.length === 0) return <p>No products available.</p>;
 
