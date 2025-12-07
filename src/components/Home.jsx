@@ -13,7 +13,10 @@ function Home() {
 
   useEffect(() => {
     const fetchProducts = async () => {
+
       try {
+      
+         await axios.get(`${API_URL}/ping`); 
         const res = await axios.get(`${API_URL}/products`);
         // Check if response is an array
         if (Array.isArray(res.data)) {
